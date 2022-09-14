@@ -18,17 +18,27 @@ const ItemCarousel = ({
   const audioRef = React.useRef();
   const videoRef = React.useRef();
 
-  const { play, handlePlay, timeAudio, durationAudio } = useAudio(audioRef, itemSelected);
+  const { play, handlePlay, handlePause, timeAudio, durationAudio } = useAudio(audioRef, itemSelected);
+
+  const playVideoAndAudio = () => {
+    handlePlay();
+    videoRef.current.play();
+  }
+
+  const pauseVideoAndAudio = () => {
+    handlePause();
+    videoRef.current.pause();
+  }
+
+  const handlePlayVideo = () => {
+    if (videoRef.current.paused) playVideoAndAudio();
+    else pauseVideoAndAudio();
+  }
 
   React.useEffect(() => {
     if (videoRef.current && audioRef.current) {
-      if (itemSelected === 5) {
-        videoRef.current.play();
-        audioRef.current.play();
-      } else {
-        videoRef.current.pause();
-        audioRef.current.pause();
-      }
+      if (itemSelected === 5) playVideoAndAudio();
+      else pauseVideoAndAudio();
     } 
   }, [itemSelected])
    
@@ -46,7 +56,7 @@ const ItemCarousel = ({
           </TitleSecondary>}
           {src.includes("mp4") &&
           <div className={styles.controls__audio}>
-            <button onClick={handlePlay}>
+            <button onClick={handlePlayVideo}>
               <i className={play ? "fas fa-pause" : "fas fa-play"}/>
             </button>
             {/* bars */}

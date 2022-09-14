@@ -6,12 +6,12 @@ const useAudio = (audioRef, audioSelected) => {
   const [durationAudio, setDurationAudio] = React.useState(0);
 
   const handlePlay = () => {
-    setPlay(!play)
-    if (play) {
-      audioRef.current.pause()
-    } else {
-      audioRef.current.play()
-    }
+    setPlay(true)
+    audioRef.current.play()
+  }
+  const handlePause = () => {
+    setPlay(false)
+    audioRef.current.pause()
   }
 
   // get the time of the audio
@@ -25,14 +25,15 @@ const useAudio = (audioRef, audioSelected) => {
     }
   }, [audioSelected, audioRef.current?.duration])
 
-  React.useEffect(() => {
-    // detect if the audio is playing
-    if(audioRef.current?.paused) setPlay(true)
-  }, [audioRef.current?.paused])
+  // React.useEffect(() => {
+  //   // detect if the audio is playing
+  //   if(audioRef.current?.paused) setPlay(true)
+  // }, [audioRef.current?.paused])
 
   return {
     play,
     handlePlay,
+    handlePause,
     timeAudio,
     durationAudio
   }
