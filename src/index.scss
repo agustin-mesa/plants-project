@@ -1,0 +1,52 @@
+@import "./globals.module.scss";
+
+:root {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  height: 100%;
+  display: flex;
+  border: 40px solid $white;
+  align-items: center;
+  justify-content: center;
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

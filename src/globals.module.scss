@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&family=Krub:wght@300;400;500;600;700&display=swap');
+
+$green_01: #233017;
+$green_02: #4D6667;
+$green_03: #93B54B;
+$white: #ffffff;
+$grey: #E1E1E1;
+$black: #232323;
+
+$primary-font: 'Chivo', sans-serif;
+$secondary-font: 'Krub', sans-serif;
+
+:export {
+  green_01: $green_01;
+  green_02: $green_02;
+  green_03: $green_03;
+  white: $white;
+  grey: $grey;
+  black: $black;
+  primary-font: $primary-font;
+  secondary-font: $secondary-font;
+}
