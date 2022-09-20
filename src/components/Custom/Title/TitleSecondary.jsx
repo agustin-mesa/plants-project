@@ -3,10 +3,12 @@ import styles from './Title.module.scss'
 
 import * as colors from "/src/globals.module.scss";
 
-const TitleSecondary = ({children, color, style, show = "show__01"}) => {
+const TitleSecondary = ({children, color, style, show = "show__01", onMouseMove = () => {}, onClick = () => {}}) => {
   return (
     <h2
       className={`${styles.title__secondary} ${styles.default} ${show ? styles[show] : ""}`}
+      onClick={onClick}
+      onMouseMove={onMouseMove}
       style={{
         color: color === "white" ? 
           colors.white

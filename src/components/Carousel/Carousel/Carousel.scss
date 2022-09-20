@@ -135,3 +135,10 @@
     }
   }
 }
+@media only screen and (max-width: 550px){
+  .carousel {
+    .carousel-control-next {
+      left: 20%;
+    }
+  }
+}

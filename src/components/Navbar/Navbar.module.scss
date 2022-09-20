@@ -12,6 +12,7 @@
   &__logo {
     width: 80px;
     z-index: 100;
+    pointer-events: none;
     img{
       width: 100%;
     }

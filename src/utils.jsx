@@ -1,4 +1,5 @@
 import bg00 from './assets/bg_00.png'
+import object00 from './assets/object_00.png'
 import bg01 from './assets/bg_01.png'
 import bg02 from './assets/bg_02.png'
 import bg03 from './assets/bg_03.webp'
@@ -9,14 +10,20 @@ export const sections = [
   {
     title: <><b>Nature</b> greatly helps, <b>protects</b> and <b>sustains</b> our daily lives.</>,
     paragraph: "",
-    src: bg00,
+    src: {
+      background: bg00,
+      object: object00
+    },
     styleTitle: {},
     showAnimation: "show__01"
   },
   {
     title: <>Plants <b>improve</b> and <b>purify</b> the air.</>,
     paragraph: "",
-    src: bg01,
+    src: {
+      background: bg01,
+      object: ""
+    },
     styleTitle: {
       textAlign: "right",
       alignItems: "flex-end"
@@ -26,7 +33,10 @@ export const sections = [
   {
     title: <>They are a <b>great benefit</b> for our home</>,
     paragraph: "",
-    src: bg02,
+    src: {
+      background: bg02,
+      object: ""
+    },
     styleTitle:{
       textAlign: "right",
       justifyContent: "flex-end",
@@ -37,7 +47,10 @@ export const sections = [
   {
     title: <>Help to <b>sleep better</b></>,
     paragraph: "",
-    src: bg03,
+    src: {
+      background: bg03,
+      object: ""
+    },
     styleTitle:{
       alignItems: "flex-start",
       justifyContent: "flex-start",
@@ -48,7 +61,10 @@ export const sections = [
   {
     title: <>They even have <b>medicinal powers</b></>,
     paragraph: "",
-    src: bg04,
+    src: {
+      background: bg04,
+      object: ""
+    },
     styleTitle: {
       textAlign: "right",
       alignItems: "flex-end",
@@ -65,7 +81,10 @@ export const sections = [
       <br />
       So, I invite you to plant your own friend. <b>Just start with a seed!</b>
     </>,
-    src: bg05,
+    src: {
+      background: bg05,
+      object: ""
+    },
     styleTitle:{},
     showAnimation: "show__01"
   },
