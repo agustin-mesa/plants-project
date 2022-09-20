@@ -5,6 +5,8 @@ import logoB from '../../assets/logo_b.png'
 import Button from '../Custom/Button/Button'
 
 const Navbar = () => {
+  const [plant, setPlant] = React.useState(false)
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar__logo}>
@@ -12,11 +14,12 @@ const Navbar = () => {
       </div>
       <div className={styles.navbar__to__action}>
         <Button
-          label="Plant a seed"
-          onClick={() => console.log('I planted a seed 🌱')}
+          label={plant ? "Plant a seed" : 'Planted 🌱'}
+          onClick={() => setPlant(!plant)}
           style={{  
             cursor: "pointer",
-            zIndex: 90
+            zIndex: 90,
+            width: "170px",
           }}
         />
       </div>
